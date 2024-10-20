@@ -1,1 +1,3 @@
-aplicativo web para la gestion de proyecto de desarrollo de software
+timetrack
+
+aplicativo web para la gestion y administracion de proyectos de desarrollo de software
