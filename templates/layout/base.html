@@ -4,14 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timetrack | {% block 'title' %}{% endblock %} </title>
+  <title> {% block 'title' %}{% endblock %} </title>
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   {% block 'styles' %}{% endblock %}
 </head>
 <body>
+  {% include './partials/header.html' %}
+
   <main>
-    {% block 'content' %}{% endblock %}
+    {% include './partials/menu.html' %}
+    
+    {% block 'content' %}
+      
+    {% endblock %}
   </main>
+
+  {% include './partials/footer.html' %}
+
   {% block 'scripts' %}{% endblock %}    
 </body>
 </html>

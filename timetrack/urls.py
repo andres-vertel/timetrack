@@ -5,5 +5,6 @@ from timetrack import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.index, name="index")
+    path("", views.index, name="index"),
+    # path("registro_horas/", include("recordHours.urls")),
 ]
