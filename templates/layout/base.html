@@ -9,10 +9,12 @@
   {% block 'styles' %}{% endblock %}
 </head>
 <body>
+  {% include './partials/topMenu.html' %}
+
   {% include './partials/header.html' %}
 
   <main>
-    {% include './partials/menu.html' %}
+    {% include './partials/leftMenu.html' %}
     
     {% block 'content' %}
       
