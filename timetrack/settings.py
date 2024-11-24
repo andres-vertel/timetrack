@@ -40,23 +40,8 @@ INSTALLED_APPS = [
     'recordHours',
     'requestExpiredRegistration',
     'projects',
-    #aplicaciones tailwind css
-    'tailwind',
-    'theme',
-    'django_browser_reload',
-    #fin aplicaciones css 
 ]
 
-#configuraciones tailwind CSS
-TAILWIND_APP_NAME = 'theme'
-
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
-
-NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
-
-#fin configuraciones tailwind
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -66,7 +51,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = 'timetrack.urls'
@@ -74,7 +58,7 @@ ROOT_URLCONF = 'timetrack.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["templates"],
+        'DIRS': [BASE_DIR /'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -136,12 +120,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = 'media/'
+
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
     '/var/www/static/',
+
 ]
 
+STATIC_ROOT = BASE_DIR / "staticfiles"
+MEDIA_ROOT = BASE_DIR / "static/media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
